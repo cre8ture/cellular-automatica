@@ -1,0 +1,72 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: 100vh;
+  margin: 0;
+  /* overflow: hidden; */
+  font-family: 'Courier New', monospace; /* Use a monospace font for even spacing */
+
+}
+
+#asciiContainer {
+  font-family: 'Courier New', monospace; /* Use a monospace font for even spacing */
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+  
+  #asciiContainer span {
+    display: inline-block;
+    font-family: 'Courier New', monospace; /* Use a monospace font for even spacing */
+
+    max-width: 100%; /* This ensures they don't grow beyond the container's width */
+    max-height: 100%;
+    width: 1ch; /* Set a fixed width for each character */
+    height: 1ch
+  }
+
+  
+#explain{
+  padding: 5px;
+  max-width: 450px;
+  position: absolute;
+  display:grid;
+  /* background-color: burlywood; */
+  grid-template-columns: 1fr;
+  bottom: 55px;
+  right: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border: solid 1px #000;
+  border-radius: 15%;
+
+  /* border-radius: 15%; */
+}
+
+#matrix {
+  font-size: 5px; 
+  word-spacing: 0.5px;  
+  line-height: 1em;  
+}
+@keyframes blob {
+  0% {
+    filter: url(#filter1);
+  }
+  33% {
+    filter: url(#filter2);
+  }
+  66% {
+    filter: url(#filter3);
+  }
+  100% {
+    filter: url(#filter1);
+  }
+}
+
+#explain {
+  animation: blob 5s infinite;
+}
